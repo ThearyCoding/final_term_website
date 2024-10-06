@@ -28,33 +28,17 @@ function showPage(page, element) {
   element.classList.add('active');
 }
 
-
 let currentSlide = 0;
 
-function showSlide(slideIndex) {
+function autoSlide() {
   const slides = document.querySelectorAll('.team-member');
   const totalSlides = slides.length;
+  const teamSlideshow = document.querySelector('.team-slideshow');
 
-  if (slideIndex >= totalSlides) {
-    currentSlide = 0;
-  } else if (slideIndex < 0) {
-    currentSlide = totalSlides - 1;
-  } else {
-    currentSlide = slideIndex;
-  }
+  currentSlide = (currentSlide + 1) % totalSlides;
 
-  const offset = -currentSlide * 330;  // Width of each team member card + margin
-  document.querySelector('.team-slideshow').style.transform = `translateX(${offset}px)`;
+  const offset = -currentSlide * 340;  // Adjust based on the card width + margin
+  teamSlideshow.style.transform = `translateX(${offset}px)`;
 }
 
-function nextSlide() {
-  showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-  showSlide(currentSlide - 1);
-}
-
-showSlide(currentSlide);
-
-
+setInterval(autoSlide, 4000); // Auto slide every 4 seconds

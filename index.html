@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Learning Website</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/logo_app.png">
+    <link rel="icon" href="images/logo_app.png" />
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar-container">
         <!-- Logo -->
-        <a href="#" class="logo"><img src="images/logo_app.png" width="50px" alt=""></a>
+        <a href="#" class="logo"
+          ><img src="images/logo_app.png" width="50px" alt=""
+        /></a>
 
         <!-- Navigation Links -->
         <ul class="nav-links" id="navLinks">
@@ -50,7 +52,10 @@
           </button>
         </div>
         <div class="hero-image">
-          <img src="images/hand-drawn-study-abroad-illustration_23-2150266839.avif" alt="Learning" />
+          <img
+            src="images/hand-drawn-study-abroad-illustra.png"
+            alt="Learning"
+          />
         </div>
       </div>
 
@@ -139,7 +144,16 @@
         <h2>What Our Students Say</h2>
         <div class="testimonial-container">
           <div class="testimonial">
-            <img src="images/student-1.jpeg" alt="Student 1" />
+            <img src="images/student-1.avif" alt="Student 1" />
+            <p>
+              "This platform has changed the way I learn. The courses are well
+              structured, and the instructors are experts in their field!"
+            </p>
+            <h4>Jane Doe</h4>
+            <p class="title">Software Engineer</p>
+          </div>
+          <div class="testimonial">
+            <img src="images/student-1.avif" alt="Student 1" />
             <p>
               "This platform has changed the way I learn. The courses are well
               structured, and the instructors are experts in their field!"
@@ -169,142 +183,209 @@
       </section>
     </section>
 
-<!-- Course Section -->
-<section id="course" class="content">
-  <div class="course-header">
-    <h2>Our Courses</h2>
-    <p>Browse through our selection of online courses.</p>
-  </div>
-
-  <!-- Course List -->
-  <div class="course-list">
-    <div class="course-card" onclick="window.location.href='course_page.html'">
-      <img src="images/web-development.png" alt="Web Development" />
-      <h3>Web Development</h3>
-      <div class="course-details">
-        <span class="price">$49.99</span>
-        <div class="stars">★★★★☆</div>
+    <!-- Course Section -->
+    <section id="course" class="content">
+      <div class="course-header">
+        <h2>Our Courses</h2>
+        <p>Browse through our selection of online courses.</p>
       </div>
-      <p>
-        Learn how to build modern websites using HTML, CSS, and JavaScript.
-      </p>
-      <p>
-        <strong>Duration:</strong> 12 hours • <strong>Lectures:</strong> 30
-      </p>
-      <div class="status coming-soon">Coming Soon</div> 
-      <a href="course_page.html" class="view-course-btn">View Course</a> 
-    </div>
 
-    <div class="course-card"  onclick="window.location.href='course_page.html'">
-      <img src="images/DataScience.jpg" alt="Data Science" />
-      <h3>Data Science</h3>
-      <div class="course-details">
-        <span class="price">$59.99</span>
-        <div class="stars">★★★★★</div>
+      <!-- Course List -->
+      <div class="course-list">
+        <div
+          class="course-card"
+          onclick="window.location.href='course_page.html'"
+        >
+          <img src="images/web-development.png" alt="Web Development" />
+          <h3>Web Development</h3>
+          <div class="course-details">
+            <span class="price">$49.99</span>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p>
+            Learn how to build modern websites using HTML, CSS, and JavaScript.
+          </p>
+          <p>
+            <strong>Duration:</strong> 12 hours • <strong>Lectures:</strong> 30
+          </p>
+          <div class="status coming-soon">Coming Soon</div>
+          <a href="course_page.html" class="view-course-btn">View Course</a>
+        </div>
+
+        <div
+          class="course-card"
+          onclick="window.location.href='course_page.html'"
+        >
+          <img src="images/DataScience.jpg" alt="Data Science" />
+          <h3>Data Science</h3>
+          <div class="course-details">
+            <span class="price">$59.99</span>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Dive into the world of data analytics and machine learning.</p>
+          <p>
+            <strong>Duration:</strong> 15 hours • <strong>Lectures:</strong> 40
+          </p>
+          <div class="status coming-soon">Coming Soon</div>
+          <a href="course_page.html" class="view-course-btn">View Course</a>
+        </div>
+
+        <div
+          class="course-card"
+          onclick="window.location.href='course_page.html'"
+        >
+          <img src="images/digital-marketing.jpeg" alt="Digital Marketing" />
+          <h3>Digital Marketing</h3>
+          <div class="course-details">
+            <span class="price">$39.99</span>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p>
+            Master the art of online marketing with industry-proven strategies.
+          </p>
+          <p>
+            <strong>Duration:</strong> 10 hours • <strong>Lectures:</strong> 25
+          </p>
+          <div class="status coming-soon">Coming Soon</div>
+          <a href="course_page.html" class="view-course-btn">View Course</a>
+        </div>
       </div>
-      <p>Dive into the world of data analytics and machine learning.</p>
-      <p>
-        <strong>Duration:</strong> 15 hours • <strong>Lectures:</strong> 40
-      </p>
-      <div class="status coming-soon">Coming Soon</div> 
-      <a href="course_page.html" class="view-course-btn">View Course</a> 
-    </div>
-
-    <div class="course-card"  onclick="window.location.href='course_page.html'">
-      <img src="images/digital-marketing.jpeg" alt="Digital Marketing" />
-      <h3>Digital Marketing</h3>
-      <div class="course-details">
-        <span class="price">$39.99</span>
-        <div class="stars">★★★★☆</div>
-      </div>
-      <p>
-        Master the art of online marketing with industry-proven strategies.
-      </p>
-      <p>
-        <strong>Duration:</strong> 10 hours • <strong>Lectures:</strong> 25
-      </p>
-      <div class="status coming-soon">Coming Soon</div> 
-      <a href="course_page.html" class="view-course-btn">View Course</a>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <section id="about" class="content">
       <div class="about-container">
         <!-- Main Heading and Introduction -->
         <h2>About Us</h2>
-        <p class="intro">Empowering learners around the world to achieve their goals and unlock new opportunities through our vast range of courses and expert instructors.</p>
-    
+        <p class="intro">
+          Empowering learners around the world to achieve their goals and unlock
+          new opportunities through our vast range of courses and expert
+          instructors.
+        </p>
+
         <!-- Who We Are and Related Sections -->
         <div class="about-grid">
           <div class="about-item">
             <h3>Who We Are</h3>
-            <p>We are a leading e-learning platform designed to provide individuals with access to quality education across various industries, helping them achieve personal and professional growth.</p>
+            <p>
+              We are a leading e-learning platform designed to provide
+              individuals with access to quality education across various
+              industries, helping them achieve personal and professional growth.
+            </p>
           </div>
           <div class="about-item">
             <h3>Our Courses</h3>
-            <p>From technology to business, health, and arts, our courses cover a wide range of topics. Whether you're starting a new career or developing your expertise, we have a course for you.</p>
+            <p>
+              From technology to business, health, and arts, our courses cover a
+              wide range of topics. Whether you're starting a new career or
+              developing your expertise, we have a course for you.
+            </p>
           </div>
           <div class="about-item">
             <h3>Our Instructors</h3>
-            <p>Our instructors are industry professionals and passionate educators, bringing real-world experience and insights into their teaching to ensure you receive the most practical knowledge.</p>
+            <p>
+              Our instructors are industry professionals and passionate
+              educators, bringing real-world experience and insights into their
+              teaching to ensure you receive the most practical knowledge.
+            </p>
           </div>
           <div class="about-item">
             <h3>Our Global Community</h3>
-            <p>We foster a vibrant global community of learners who engage with each other, exchange ideas, and help each other grow through our platform.</p>
+            <p>
+              We foster a vibrant global community of learners who engage with
+              each other, exchange ideas, and help each other grow through our
+              platform.
+            </p>
           </div>
         </div>
-    
+
         <!-- Additional Sections -->
         <div class="additional-sections">
           <div class="section story">
             <h3>Our Story</h3>
-            <p>Founded in 2020, our platform was born out of a passion for education and a desire to make learning accessible to everyone, no matter where they are in the world. Our mission is to democratize education by providing learners with affordable and flexible access to top-notch content.</p>
+            <p>
+              Founded in 2020, our platform was born out of a passion for
+              education and a desire to make learning accessible to everyone, no
+              matter where they are in the world.
+            </p>
           </div>
           <div class="section why-us">
             <h3>Why Choose Us</h3>
-            <p>Our courses are designed with you in mind. We offer lifetime access, expert support, and real-world projects that equip you with the skills you need to thrive in today’s fast-paced industries.</p>
+            <p>
+              Our courses are designed with you in mind. We offer lifetime
+              access, expert support, and real-world projects that equip you
+              with the skills you need to thrive.
+            </p>
           </div>
           <div class="section success-stories">
             <h3>Learner Success Stories</h3>
-            <p>Our learners' success is our success. Thousands of learners have unlocked new career opportunities, launched businesses, and developed skills they never thought possible through our platform. Hear their inspiring stories and see how they achieved their goals.</p>
+            <p>
+              Thousands of learners have unlocked new career opportunities,
+              launched businesses, and developed skills through our platform.
+              Hear their stories and see how they achieved their goals.
+            </p>
           </div>
           <div class="section impact">
             <h3>Our Impact</h3>
-            <p>With over 1 million students and counting, we are proud to be making a positive impact on learners from over 150 countries. Together, we are changing the way the world learns.</p>
+            <p>
+              With over 1 million students from over 150 countries, we are
+              changing the way the world learns.
+            </p>
           </div>
         </div>
 
+        <!-- Team Section -->
         <div class="team-section">
           <h2>Meet Our Team</h2>
           <div class="team-container">
             <div class="team-slideshow">
               <div class="team-member" id="team-member-1">
-                <img src="images/sopheaktra.jpg" alt="Team Member 1">
-                <h3>John Doe</h3>
-                <p>Frontend Developer</p>
+                <img src="images/sopheaktra.jpg" alt="Team Member 1" />
+                <div class="team-overlay">
+                  <h3>Chorn Theary</h3>
+                  <p>Full Stack Developer</p>
+                </div>
               </div>
               <div class="team-member" id="team-member-2">
-                <img src="images/sopheaktra.jpg" alt="Team Member 2">
-                <h3>Jane Smith</h3>
-                <p>Backend Developer</p>
+                <img src="images/sopheaktra.jpg" alt="Team Member 2" />
+                <div class="team-overlay">
+                  <h3>Dy Sopheaktra</h3>
+                  <p>Graphic Designer</p>
+                </div>
               </div>
               <div class="team-member" id="team-member-3">
-                <img src="images/sopheaktra.jpg" alt="Team Member 3">
-                <h3>Michael Lee</h3>
-                <p>UI/UX Designer</p>
+                <img src="images/yim_longsorkan.jpg" alt="Team Member 3" />
+                <div class="team-overlay">
+                  <h3>Yim Longsorkan</h3>
+                  <p>UI/UX Designer</p>
+                </div>
               </div>
-              
+              <div class="team-member" id="team-member-3">
+                <img src="images/yim_longsorkan.jpg" alt="Team Member 3" />
+                <div class="team-overlay">
+                  <h3>Khoeurn Veasna</h3>
+                  <p>Video Editor</p>
+                </div>
+              </div>
+              <div class="team-member" id="team-member-3">
+                <img src="images/yim_longsorkan.jpg" alt="Team Member 3" />
+                <div class="team-overlay">
+                  <h3>Huon Chanthu</h3>
+                  <p>Graphic Designer</p>
+                </div>
+              </div>
+              <div class="team-member" id="team-member-3">
+                <img src="images/yim_longsorkan.jpg" alt="Team Member 3" />
+                <div class="team-overlay">
+                  <h3>Pen Vannet</h3>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
             </div>
-            <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
-            <button class="next-btn" onclick="nextSlide()">&#10095;</button>
           </div>
         </div>
       </div>
     </section>
-    
-    
+
     <!-- Footer -->
     <footer>
       <div class="footer-container">
