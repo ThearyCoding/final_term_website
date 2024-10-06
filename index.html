@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <a href="#" class="logo"><img src="images/logo_app.png" width="50px" alt=""></a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#" onclick="showPage('home', this)" class="active">Home</a>
+          </li>
+          <li><a href="#" onclick="showPage('course', this)">Course</a></li>
+          <li><a href="#" onclick="showPage('about', this)">About Us</a></li>
+        </ul>
+
+        <!-- Hamburger Menu Icon for Mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="content active">
+      <div class="hero-section">
+        <div class="hero-text">
+          <h1>
+            Find The Best <br />
+            Online Courses & <br />
+            Learn
+          </h1>
+          <p>
+            Explore courses that will help you achieve your goals and boost your
+            knowledge.
+          </p>
+          <button class="explore-btn" onclick="showPage('course', this)">
+            Explore Courses
+          </button>
+        </div>
+        <div class="hero-image">
+          <img src="images/hand-drawn-study-abroad-illustration_23-2150266839.avif" alt="Learning" />
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="feature">
+          <img src="images/Audio-Video-icon.png" alt="Audio & Video" />
+          <h3>Audio & Video</h3>
+          <p>High-quality audio and video lessons.</p>
+        </div>
+        <div class="feature">
+          <img
+            src="images/Virtual-classesroom-icon.png"
+            alt="Virtual Classrooms"
+          />
+          <h3>Virtual Classrooms</h3>
+          <p>Interactive virtual classrooms to enhance learning.</p>
+        </div>
+        <div class="feature">
+          <img src="images/group-learning.png" alt="Group Learning" />
+          <h3>Group Learning</h3>
+          <p>Collaborate with peers to improve your skills.</p>
+        </div>
+      </section>
+
+      <!-- Additional Info Section -->
+      <section class="more-info">
+        <div class="info-box">
+          <h2>Why Choose Us?</h2>
+          <p>
+            We offer top-notch courses with experts in various fields. Our
+            curriculum is designed to help you learn faster and get hands-on
+            experience.
+          </p>
+        </div>
+        <div class="info-box">
+          <h2>Join a Global Community</h2>
+          <p>
+            Connect with learners from around the world. Share insights, ask
+            questions, and engage in discussions with our vibrant learning
+            community.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <details class="faq">
+          <summary>
+            <span>What courses do you offer?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <p>
+            We offer a wide range of courses in various fields, including
+            technology, business, design, and more.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span>How do I join a course?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <p>
+            Simply sign up, select the course you are interested in, and follow
+            the instructions to join.
+          </p>
+        </details>
+
+        <details class="faq">
+          <summary>
+            <span>Are the courses self-paced?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <p>
+            Yes, our courses are designed to allow learners to go at their own
+            pace, though some may have deadlines for assignments.
+          </p>
+        </details>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section class="testimonial-section">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <img src="images/student-1.jpeg" alt="Student 1" />
+            <p>
+              "This platform has changed the way I learn. The courses are well
+              structured, and the instructors are experts in their field!"
+            </p>
+            <h4>Jane Doe</h4>
+            <p class="title">Software Engineer</p>
+          </div>
+          <div class="testimonial">
+            <img src="images/student-2.jpg" alt="Student 2" />
+            <p>
+              "I love the flexibility and the hands-on approach. It helped me
+              advance my career and gain real skills."
+            </p>
+            <h4>John Smith</h4>
+            <p class="title">UX Designer</p>
+          </div>
+          <div class="testimonial">
+            <img src="images/student-3.jpeg" alt="Student 3" />
+            <p>
+              "Joining this community was the best decision for my education.
+              The group learning experience is simply awesome!"
+            </p>
+            <h4>Emily Johnson</h4>
+            <p class="title">Marketing Specialist</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+<!-- Course Section -->
+<section id="course" class="content">
+  <div class="course-header">
+    <h2>Our Courses</h2>
+    <p>Browse through our selection of online courses.</p>
+  </div>
+
+  <!-- Course List -->
+  <div class="course-list">
+    <div class="course-card" onclick="window.location.href='course_page.html'">
+      <img src="images/web-development.png" alt="Web Development" />
+      <h3>Web Development</h3>
+      <div class="course-details">
+        <span class="price">$49.99</span>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <p>
+        Learn how to build modern websites using HTML, CSS, and JavaScript.
+      </p>
+      <p>
+        <strong>Duration:</strong> 12 hours • <strong>Lectures:</strong> 30
+      </p>
+      <div class="status coming-soon">Coming Soon</div> 
+      <a href="course_page.html" class="view-course-btn">View Course</a> 
+    </div>
+
+    <div class="course-card"  onclick="window.location.href='course_page.html'">
+      <img src="images/DataScience.jpg" alt="Data Science" />
+      <h3>Data Science</h3>
+      <div class="course-details">
+        <span class="price">$59.99</span>
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>Dive into the world of data analytics and machine learning.</p>
+      <p>
+        <strong>Duration:</strong> 15 hours • <strong>Lectures:</strong> 40
+      </p>
+      <div class="status coming-soon">Coming Soon</div> 
+      <a href="course_page.html" class="view-course-btn">View Course</a> 
+    </div>
+
+    <div class="course-card"  onclick="window.location.href='course_page.html'">
+      <img src="images/digital-marketing.jpeg" alt="Digital Marketing" />
+      <h3>Digital Marketing</h3>
+      <div class="course-details">
+        <span class="price">$39.99</span>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <p>
+        Master the art of online marketing with industry-proven strategies.
+      </p>
+      <p>
+        <strong>Duration:</strong> 10 hours • <strong>Lectures:</strong> 25
+      </p>
+      <div class="status coming-soon">Coming Soon</div> 
+      <a href="course_page.html" class="view-course-btn">View Course</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="about" class="content">
+      <div class="about-container">
+        <!-- Main Heading and Introduction -->
+        <h2>About Us</h2>
+        <p class="intro">Empowering learners around the world to achieve their goals and unlock new opportunities through our vast range of courses and expert instructors.</p>
+    
+        <!-- Who We Are and Related Sections -->
+        <div class="about-grid">
+          <div class="about-item">
+            <h3>Who We Are</h3>
+            <p>We are a leading e-learning platform designed to provide individuals with access to quality education across various industries, helping them achieve personal and professional growth.</p>
+          </div>
+          <div class="about-item">
+            <h3>Our Courses</h3>
+            <p>From technology to business, health, and arts, our courses cover a wide range of topics. Whether you're starting a new career or developing your expertise, we have a course for you.</p>
+          </div>
+          <div class="about-item">
+            <h3>Our Instructors</h3>
+            <p>Our instructors are industry professionals and passionate educators, bringing real-world experience and insights into their teaching to ensure you receive the most practical knowledge.</p>
+          </div>
+          <div class="about-item">
+            <h3>Our Global Community</h3>
+            <p>We foster a vibrant global community of learners who engage with each other, exchange ideas, and help each other grow through our platform.</p>
+          </div>
+        </div>
+    
+        <!-- Additional Sections -->
+        <div class="additional-sections">
+          <div class="section story">
+            <h3>Our Story</h3>
+            <p>Founded in 2020, our platform was born out of a passion for education and a desire to make learning accessible to everyone, no matter where they are in the world. Our mission is to democratize education by providing learners with affordable and flexible access to top-notch content.</p>
+          </div>
+          <div class="section why-us">
+            <h3>Why Choose Us</h3>
+            <p>Our courses are designed with you in mind. We offer lifetime access, expert support, and real-world projects that equip you with the skills you need to thrive in today’s fast-paced industries.</p>
+          </div>
+          <div class="section success-stories">
+            <h3>Learner Success Stories</h3>
+            <p>Our learners' success is our success. Thousands of learners have unlocked new career opportunities, launched businesses, and developed skills they never thought possible through our platform. Hear their inspiring stories and see how they achieved their goals.</p>
+          </div>
+          <div class="section impact">
+            <h3>Our Impact</h3>
+            <p>With over 1 million students and counting, we are proud to be making a positive impact on learners from over 150 countries. Together, we are changing the way the world learns.</p>
+          </div>
+        </div>
+
+        <div class="team-section">
+          <h2>Meet Our Team</h2>
+          <div class="team-container">
+            <div class="team-slideshow">
+              <div class="team-member" id="team-member-1">
+                <img src="images/sopheaktra.jpg" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Frontend Developer</p>
+              </div>
+              <div class="team-member" id="team-member-2">
+                <img src="images/sopheaktra.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Backend Developer</p>
+              </div>
+              <div class="team-member" id="team-member-3">
+                <img src="images/sopheaktra.jpg" alt="Team Member 3">
+                <h3>Michael Lee</h3>
+                <p>UI/UX Designer</p>
+              </div>
+              
+            </div>
+            <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <p>© 2024 MyWebsite. All rights reserved.</p>
+        <p>Contact us at: support@mywebsite.com</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
