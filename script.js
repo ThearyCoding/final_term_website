@@ -27,17 +27,66 @@ function showPage(page, element) {
   element.classList.add('active');
 }
 
-let currentSlide = 0;
 
-function autoSlide() {
-  const slides = document.querySelectorAll('.team-member');
-  const totalSlides = slides.length;
-  const teamSlideshow = document.querySelector('.team-slideshow');
 
-  currentSlide = (currentSlide + 1) % totalSlides;
+document.addEventListener('DOMContentLoaded', () => {
+  const slideshow = document.querySelector('.team-slideshow');
+  const teamMembers = document.querySelectorAll('.team-member');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentIndex = 0;
+  let memberWidth = teamMembers[0].offsetWidth + 100; 
 
-  const offset = -currentSlide * 340;  
-  teamSlideshow.style.transform = `translateX(${offset}px)`;
-}
+  function updateSlidePosition() {
+    slideshow.style.transform = `translateX(-${currentIndex * memberWidth}px)`;
+  }
 
-setInterval(autoSlide, 4000); 
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = teamMembers.length - 1;
+    }
+    updateSlidePosition();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < teamMembers.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; 
+    }
+    updateSlidePosition();
+  });
+
+  let startX = 0;
+  let isDragging = false;
+
+  slideshow.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  slideshow.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diff = startX - currentX;
+
+    if (diff > 50) {
+      nextBtn.click(); 
+      isDragging = false;
+    } else if (diff < -50) {
+      prevBtn.click();
+      isDragging = false;
+    }
+  });
+
+  slideshow.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+
+  window.addEventListener('resize', () => {
+    memberWidth = teamMembers[0].offsetWidth + 20; 
+    updateSlidePosition();
+  });
+});

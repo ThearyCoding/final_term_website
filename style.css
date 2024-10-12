@@ -595,22 +595,28 @@ details[open] .arrow {
   background-color: #f3f4f6;
 }
 
-/* Team Section */
+
 .team-container {
   position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.team-slideshow-wrapper {
   overflow: hidden;
   width: 100%;
-
-  margin: 0 auto;
 }
 
 .team-slideshow {
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .team-member {
-  min-width: 330px;
+  min-width: 300px;
   margin: 0 10px;
   position: relative;
   overflow: hidden;
@@ -618,8 +624,9 @@ details[open] .arrow {
 
 .team-member img {
   width: 100%;
+  height: 400px; 
+  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -643,24 +650,32 @@ details[open] .arrow {
   transform: translateY(0);
 }
 
-@keyframes slideShow {
-  0% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-340px);
-  }
-  66% {
-    transform: translateX(-680px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.slider-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
 }
 
-.team-slideshow {
-  animation: slideShow 10s infinite;
+.slider-btn:hover {
+  background-color: #555;
 }
+
+#prevBtn {
+  position: absolute;
+  left: 10px;
+  z-index: 10;
+}
+
+#nextBtn {
+  position: absolute;
+  right: 10px;
+  z-index: 10;
+}
+
 
 /* Responsive for Tablets */
 @media (max-width: 1024px) {
@@ -690,6 +705,8 @@ details[open] .arrow {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+
+  
   .nav-links {
     position: absolute;
     right: 0;
@@ -801,6 +818,19 @@ details[open] .arrow {
   .info-box {
     width: 90%;
     margin-bottom: 40px;
+  }
+
+  .team-member {
+    min-width: 240px;
+  }
+
+  .team-member img {
+    height: 250px;
+  }
+
+  #prevBtn, #nextBtn {
+    padding: 10px;
+    font-size: 14px;
   }
 }
 
